@@ -13,10 +13,10 @@ const ForgotPassword = ({ history }) => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const { user } = useSelector((state) => ({ ...state }))
-  useEffect(() => {
-    if (user) history.push("/")
-  }, [])
+  // const { user } = useSelector((state) => ({ ...state }))
+  // useEffect(() => {
+  //   if (user) history.push("/")
+  // }, [])
 
   // submitHandler
   const submitHandler = async (e) => {

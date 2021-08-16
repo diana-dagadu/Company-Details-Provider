@@ -6,7 +6,7 @@ import { fetchCompany } from "../reducers/apiReducer";
 
 const Home = () => {
   // getting user search
-  const [search, setSearch] = useState("")
+  const [search, setSearch] = useState("amalitech.org")
 
   const history = useHistory()
   
@@ -33,11 +33,11 @@ const Home = () => {
         <h2 className="subtitle">Accurate, Fast and Reliable Data</h2>
         <div className="card_wrap">
           <div className="card">
-            <form className="form" onSubmit={submitHandler}>
+            <form className="domain-form" onSubmit={submitHandler}>
               <input
                 className="main-form"
                 type="text"
-                placeholder="Enter domain name or LinkedIn name"
+                placeholder="Enter domain name"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
@@ -46,12 +46,13 @@ const Home = () => {
           </div>
           <div className="info-card">
             <div className="display-card">
-              <h3>Industry: {company?.industry}</h3>
-              <h3>Name: {company?.name}</h3>
-              <h3>Country: {company?.country}</h3>
-              <h3>Year Founded: {company?.year_founded}</h3>
-              <h3>Linkedin Url: {company?.linkedin_url}</h3>
-              <h3>Domain: {company?.domain}</h3>
+              <h3>Industry: <span>{company?.industry}</span> </h3>
+              <h3>Name: <span>{company?.name}</span></h3>
+              <h3>Country: <span>{company?.country}</span></h3>
+              <h3>Year Founded:<span>{company?.year_founded}</span> </h3>
+              <h3>Employee Count:<span>{company?.employees_count}</span> </h3>
+              <h3>Linkedin Url:<span>{company?.linkedin_url}</span> </h3>
+              <h3>Domain:<span>{company?.domain}</span> </h3>
             </div>
           </div>
         </div>

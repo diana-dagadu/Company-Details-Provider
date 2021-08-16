@@ -3,7 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import firebase from "firebase";
 import { useDispatch } from "react-redux";
 import { LOGOUT } from "../reducers/actions";
-// import dd_resize from "../img/avatar.svg";
+import appLogo from "../img/Logooooo.png";
 
 const Navbar = (props) => {
   const dispatch = useDispatch();
@@ -25,9 +25,9 @@ const logout = () => {
 		<nav className="navbar">
 			<div className="max-width">
 				<div className="logo">
-					<Link to="/">
-						<img src="" alt="dd" />
-					</Link>
+					{/* <Link to="/"> */}
+					  <img src={appLogo} alt="dd" />
+					{/* </Link> */}
 				</div>
 				{props.homeNav && (
 					<ul className="menu">
